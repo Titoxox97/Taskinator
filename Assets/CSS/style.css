@@ -3,15 +3,16 @@
 }
 
 :root {
-  --primary: #44e9ff;
-  --secondary: #497980;
-  --tertiary: rgb(192, 246, 253);
+  --primary: #2F3C7E;
+  --secondary: #ADD8E6;
+  --tertiary: rgb(63, 81, 160);
   --grey: #333;
+  --stripe: white;
   font-size: 62.5%;
 }
 
 body {
-  background: #ededed;
+  
   color: var(--grey);
   margin: 0;
   padding: 0;
@@ -22,7 +23,14 @@ body {
 }
 
 header {
-  background: var(--secondary);
+  height: 25vh;
+  background: repeating-linear-gradient(
+    38deg,
+   var(--secondary) 0px,
+   var(--secondary)20px,
+    var(--stripe) 20px,
+    var(--stripe) 40px
+   );
   padding: 30px 25px;
   border-bottom: 5px solid var(--primary);
 }
@@ -61,7 +69,13 @@ form .form-group {
 
 footer {
   width: 100%;
-  background: var(--secondary);
+  background: repeating-linear-gradient(
+    38deg,
+   var(--secondary) 0px,
+   var(--secondary)20px,
+    var(--stripe) 20px,
+    var(--stripe) 40px
+   );;
   color: var(--tertiary);
   font-size: 2.4rem;
   padding: 20px;
@@ -145,6 +159,10 @@ footer {
   position: relative;
   top: -3px;
   box-shadow: 0 3px var(--grey);
+}
+
+#save-task.btn {
+  color: #ededed;
 }
 
 .btn:hover {
